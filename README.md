@@ -9,7 +9,15 @@ Automatically extract a VPN cookie from remote.lincoln.ac.uk and connect. For fa
 Please refer to the [documentation](https://raymondkirk.github.io/uol_auto_vpn/) for installation instructions and API usage.
 
 ## Usage
-### Method One
+
+### Method One (Pip)
+
+```bash 
+python3 -m pip install uol_auto_vpn
+uol_auto_vpn
+```
+
+### Method Two (Bash)
 
 One line installer. 
 
@@ -20,10 +28,11 @@ wget -qO - https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/run.s
 This will install the repo to `~/projects/uol_auto_vpn"`. Where you can add to the configuration.
 
 
-### Method Two
+### Method Three (Source)
 
 ```bash
+sudo apt install python3 python3-venv openconnect
 git clone https://github.com/uol_auto_vpn --depth 1
 cd uol_auto_vpn
-./run.sh  # or python uol_auto_vpn/run.py
+./run.sh  # or pip install -e . && uol_auto_vpn
 ```
