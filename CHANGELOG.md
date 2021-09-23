@@ -1,13 +1,19 @@
 # Changelog
 
-Generated on Thu 23 Sep 14:30:47 BST 2021.
+Generated on Thu 23 Sep 15:06:28 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
 
+## [0.0.7](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.7)
+
+- Version incremented '0.0.6' => '0.0.7' ([c06aee1](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/c06aee1fa509730772b81c4f29ceeff62633fe99))
+- Ensure keyring exists ([482f6da](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/482f6daf0ee562551d07ba1a4c896ad67a9f575b))
+- Added platform checks ([29714a1](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/29714a1d5b7549705cb4fe1d634bebf3f27e0c73))
+
 ## [0.0.6](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.6)
 
-- Version incremented '0.0.5' => '0.0.6' ([c921dee](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/c921dee0a37e16acca55ec9092e2bdee7ac95c37))
+- Version incremented '0.0.5' => '0.0.6' ([0df0817](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/0df081749ad975de846c5495eb6e8ef797a99bc7))
 - Support multiplatform ([a7a76c7](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/a7a76c70eba56d694daddda7e715b827176fd2cf))
 
 ## [0.0.5](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.5)
