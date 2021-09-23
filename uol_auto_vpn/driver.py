@@ -16,6 +16,11 @@ platform = {'linux': 'linux64', 'linux2': 'linux64', 'linux3': 'linux64', 'win32
 driver_file = driver_folder / f"chromedriver{'.exe' if platform == 'win32' else ''}"
 driver_profile.mkdir(parents=True, exist_ok=True)
 
+def delete_driver():
+    try:
+        driver_folder.rmdir()
+    except Exception as e:
+        print(e)
 
 def download_driver(driver_url, destination=driver_folder) -> Path:
     resp = urlopen(driver_url)
@@ -47,8 +52,10 @@ class Browser:
         opts = webdriver.ChromeOptions()
         opts.add_argument("--headless")
         opts.add_argument(f"user-data-dir={driver_profile}")
+        opts.add_argument("window-size=600,600")
         driver = webdriver.Remote(command_executor=self.url, desired_capabilities=DesiredCapabilities.CHROME,
                                   options=opts)
+        driver.set_window_size(600, 600)
         driver.close()
         driver.session_id = self.session_id
         return driver

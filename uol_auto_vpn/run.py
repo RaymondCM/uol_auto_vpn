@@ -3,7 +3,7 @@ from __future__ import division, absolute_import, print_function
 import os
 import time
 
-from uol_auto_vpn.driver import Browser
+from uol_auto_vpn.driver import Browser, delete_driver
 from uol_auto_vpn.env import load_env, delete_env
 
 
@@ -17,6 +17,7 @@ def cli():
 
     if args.reset:
         delete_env()
+        delete_driver()
 
     run_browser()
 
@@ -27,6 +28,7 @@ def run_browser():
     driver = browser.open()
     driver.get(server)
 
+    time.sleep(1)
     if username:
         driver.find_element_by_xpath('//*[@id="userNameInput"]').send_keys(username)
     if password:
