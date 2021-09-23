@@ -11,7 +11,9 @@ from . import root
 
 driver_folder = root / "drivers"
 driver_profile = driver_folder / "profile"
-driver_file = driver_folder / "chromedriver"
+platform = {'linux': 'linux64', 'linux2': 'linux64', 'linux3': 'linux64', 'win32': 'win32', 'cygwin': 'win32',
+            'darwin': 'mac64'}.get(sys.platform, 'linux64')
+driver_file = driver_folder / f"chromedriver{'.exe' if platform == 'win32' else ''}"
 driver_profile.mkdir(parents=True, exist_ok=True)
 
 
@@ -27,8 +29,6 @@ def download_driver(driver_url, destination=driver_folder) -> Path:
 def get_driver() -> Path:
     if driver_file.is_file():
         return driver_file
-    platform = {'linux': 'linux64', 'linux2': 'linux64', 'linux3': 'linux64', 'win32': 'win32', 'cygwin': 'win32',
-                'darwin': 'mac64'}.get(sys.platform, 'linux64')
     return download_driver(f"https://chromedriver.storage.googleapis.com/93.0.4577.63/chromedriver_{platform}.zip")
 
 
