@@ -1,13 +1,19 @@
 # Changelog
 
-Generated on Thu 23 Sep 15:06:28 BST 2021.
+Generated on Thu 23 Sep 15:26:14 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
 
+## [1.0.0](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.0)
+
+- Version incremented '0.0.7' => '1.0.0' ([269c827](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/269c8277bf16157989c19e90baed769a06789f83))
+- Ensure drivers are reset ([6521eb3](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/6521eb3a0a0e4106785a9d66c94f2f164228fc0f))
+- Added delete driver functionality ([ac51c51](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/ac51c5130a525ad37dad3cfd61ed61b185a556b8))
+
 ## [0.0.7](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.7)
 
-- Version incremented '0.0.6' => '0.0.7' ([c06aee1](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/c06aee1fa509730772b81c4f29ceeff62633fe99))
+- Version incremented '0.0.6' => '0.0.7' ([5d8a0c3](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/5d8a0c3a13d6f28c74ae510699ba9fc050f64b36))
 - Ensure keyring exists ([482f6da](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/482f6daf0ee562551d07ba1a4c896ad67a9f575b))
 - Added platform checks ([29714a1](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/29714a1d5b7549705cb4fe1d634bebf3f27e0c73))
 
