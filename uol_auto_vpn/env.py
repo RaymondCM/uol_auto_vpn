@@ -48,7 +48,11 @@ def load_env():
 
     # Try to get password from keyring
     if username is not None and password == "keyring":
-        password = keyring.get_password(keyring_service, username)
+        try:
+            password = keyring.get_password(keyring_service, username)
+        except Exception as e:
+            pass
+
         if password is None:
             getter = input
             try:
@@ -59,7 +63,7 @@ def load_env():
             password = getter(f"Please enter your password for {username}: ")
             password = None if len(password) < 3 else password
             try:
-                keyring.set_password("uol_auto_vpn", username, password)
+                keyring.set_password(keyring_service, username, password)
             except Exception as e:
                 pass
 
