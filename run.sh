@@ -4,8 +4,9 @@ cd $(cd -P -- "$(dirname -- "$0")" && pwd -P) || exit
 
 name="uol_auto_vpn"
 dl_address="https://git.raymondt.co.uk/${name}"
+run_file="uol_auto_vpn/run.py"
 
-if [ "$1" -gt "-1" ]; then
+if [[ -n ${1+x} ]]; then
   echo "Downloading"
   cd ~
   mkdir -p $HOME/projects/
@@ -16,7 +17,7 @@ if [ "$1" -gt "-1" ]; then
   echo -e "\nTo run in future please execute .$(realpath run.sh)"
 fi
 
-if ! [ -f uol_auto_vpn.py ]; then
+if ! [ -f ${run_file} ]; then
   echo "Script root not found see ${dl_address}"
   exit 1
 fi
@@ -25,8 +26,14 @@ if ! [ -d venv ]; then
   python3 -m venv venv --clear
   source venv/bin/activate
   pip install --upgrade pip setuptools wheel
-  pip install -r requirements.txt
+  pip install -e .
+fi
+
+if ! which openconnect > /dev/null; then
+  echo "openconnect not found installing"
+  sudo apt-get update
+  sudo apt-get install openconnect
 fi
 
 source venv/bin/activate
-python uol_auto_vpn.py
+python ${run_file}
