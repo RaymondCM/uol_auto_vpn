@@ -1,10 +1,15 @@
 # Changelog
 
-Generated on Thu 23 Sep 14:07:29 BST 2021.
+Generated on Thu 23 Sep 14:14:54 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
-- Added python package ([8ab8f40](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/8ab8f40c84bbfe72ca6009bdf682616e9062f772))
+
+## [0.0.5](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.5)
+
+- Version incremented '0.0.4' => '0.0.5' ([7ac42ad](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/7ac42ad94996522e94db4c215990f1168e5555cc))
+- Update instructions ([070c587](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/070c5877d00d1bc2d97936f115cca36c4fbe1c89))
+- Added python package ([1b5bdb9](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/1b5bdb9aa72e87569d4f3619c0cb8d7b9c6cc5c6))
 
 ## [0.0.3](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/0.0.3)
 
