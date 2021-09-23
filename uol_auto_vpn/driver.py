@@ -16,11 +16,20 @@ platform = {'linux': 'linux64', 'linux2': 'linux64', 'linux3': 'linux64', 'win32
 driver_file = driver_folder / f"chromedriver{'.exe' if platform == 'win32' else ''}"
 driver_profile.mkdir(parents=True, exist_ok=True)
 
+
+def rmtree(f: Path):
+    if f.is_file():
+        f.unlink()
+    else:
+        for child in f.iterdir():
+            rmtree(child)
+        f.rmdir()
+
 def delete_driver():
     try:
-        driver_folder.rmdir()
+        rmtree(driver_folder)
     except Exception as e:
-        print(e)
+        pass
 
 def download_driver(driver_url, destination=driver_folder) -> Path:
     resp = urlopen(driver_url)

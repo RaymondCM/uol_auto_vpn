@@ -11,7 +11,7 @@ def delete_env():
     try:
         env_file.unlink()
     except Exception as e:
-        print(e)
+        pass
 
 
 def update_env(json_data):
