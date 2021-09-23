@@ -40,6 +40,11 @@ if __name__ == '__main__':
             'selenium==3.141.0',
             'keyring==23.2.1',
         ],
+        entry_points={
+            'console_scripts': [
+                'uol_auto_vpn = uol_auto_vpn.run:cli'
+            ]
+        },
         python_requires='>=3.6',
     )
 

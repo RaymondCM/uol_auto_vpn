@@ -7,8 +7,15 @@ env_file = root / "env.json"
 keyring_service = "uol_auto_vpn"
 
 
-def update_env(json_data, path):
-    with path.open("w") as json_file:
+def delete_env():
+    try:
+        env_file.unlink()
+    except Exception as e:
+        print(e)
+
+
+def update_env(json_data):
+    with env_file.open("w") as json_file:
         json.dump(json_data, json_file, indent=4)
 
 
@@ -25,7 +32,7 @@ def load_env():
             username = data["USERNAME"]
             password = data["PASSWORD"]
     else:
-        update_env({"SERVER": server, "USERNAME": username, "PASSWORD": password}, env_file)
+        update_env({"SERVER": server, "USERNAME": username, "PASSWORD": password})
 
     # Set username in keyring for first time if none
     if username is None and password == "keyring":
@@ -37,7 +44,7 @@ def load_env():
                 keyring.delete_password(keyring_service, username)
             except Exception as e:
                 pass
-            update_env({"SERVER": server, "USERNAME": username, "PASSWORD": password}, env_file)
+            update_env({"SERVER": server, "USERNAME": username, "PASSWORD": password})
 
     # Try to get password from keyring
     if username is not None and password == "keyring":
