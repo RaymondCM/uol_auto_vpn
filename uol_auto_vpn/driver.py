@@ -1,3 +1,4 @@
+import sys
 from io import BytesIO
 from pathlib import Path
 from urllib.request import urlopen
@@ -26,7 +27,9 @@ def download_driver(driver_url, destination=driver_folder) -> Path:
 def get_driver() -> Path:
     if driver_file.is_file():
         return driver_file
-    return download_driver("https://chromedriver.storage.googleapis.com/93.0.4577.63/chromedriver_linux64.zip")
+    platform = {'linux': 'linux64', 'linux2': 'linux64', 'linux3': 'linux64', 'win32': 'win32', 'cygwin': 'win32',
+                'darwin': 'mac64'}.get(sys.platform, 'linux64')
+    return download_driver(f"https://chromedriver.storage.googleapis.com/93.0.4577.63/chromedriver_{platform}.zip")
 
 
 class Browser:
