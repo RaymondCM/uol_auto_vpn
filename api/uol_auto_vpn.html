@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>uol_auto_vpn package &mdash; raymond 1.0.0 documentation</title>
+  <title>uol_auto_vpn package &mdash; raymond 1.0.1 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -29,7 +29,7 @@
             <a href="../index.html" class="icon icon-home"> raymond
           </a>
               <div class="version">
-                1.0.0
+                1.0.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="modules.html">uol_auto_vpn</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">uol_auto_vpn package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-uol_auto_vpn.credentials">uol_auto_vpn.credentials module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-uol_auto_vpn.driver">uol_auto_vpn.driver module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-uol_auto_vpn.env">uol_auto_vpn.env module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-uol_auto_vpn.run">uol_auto_vpn.run module</a></li>
@@ -87,11 +88,91 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
+<section id="module-uol_auto_vpn.credentials">
+<span id="uol-auto-vpn-credentials-module"></span><h2>uol_auto_vpn.credentials module<a class="headerlink" href="#module-uol_auto_vpn.credentials" title="Permalink to this headline"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.CredentialsException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">CredentialsException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.credentials.CredentialsException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Default exception for CredentialsManager</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.CredentialsServiceException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">CredentialsServiceException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.credentials.CredentialsServiceException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#uol_auto_vpn.credentials.CredentialsException" title="uol_auto_vpn.credentials.CredentialsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">uol_auto_vpn.credentials.CredentialsException</span></code></a></p>
+<p>Default exception for Service errors within CredentialsManager</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.CredentialsKeyException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">CredentialsKeyException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.credentials.CredentialsKeyException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#uol_auto_vpn.credentials.CredentialsException" title="uol_auto_vpn.credentials.CredentialsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">uol_auto_vpn.credentials.CredentialsException</span></code></a></p>
+<p>Default exception for Key errors within CredentialsManager</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.CredentialsValueException">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">CredentialsValueException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.credentials.CredentialsValueException" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#uol_auto_vpn.credentials.CredentialsException" title="uol_auto_vpn.credentials.CredentialsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">uol_auto_vpn.credentials.CredentialsException</span></code></a></p>
+<p>Default exception for Value errors within CredentialsManager</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.credentials_manager_from_str">
+<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">credentials_manager_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manager</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.credentials.credentials_manager_from_str" title="Permalink to this definition"></a></dt>
+<dd><p>Return a credentials manager from string, if kind doesn’t exist on the system raise a CredentialsException</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.PlainTextCredentials">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">PlainTextCredentials</span></span><a class="headerlink" href="#uol_auto_vpn.credentials.PlainTextCredentials" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">uol_auto_vpn.credentials._CredentialsManager</span></code></p>
+<p>Plain text credentials manager that stores in the default directory (same as this file)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.PlainTextCredentials.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.PlainTextCredentials.set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.PlainTextCredentials.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.PlainTextCredentials.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.PlainTextCredentials.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.PlainTextCredentials.delete" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.KeyringCredentials">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.credentials.</span></span><span class="sig-name descname"><span class="pre">KeyringCredentials</span></span><a class="headerlink" href="#uol_auto_vpn.credentials.KeyringCredentials" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">uol_auto_vpn.credentials._CredentialsManager</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.KeyringCredentials.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.KeyringCredentials.set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.KeyringCredentials.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.KeyringCredentials.get" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="uol_auto_vpn.credentials.KeyringCredentials.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#uol_auto_vpn.credentials.KeyringCredentials.delete" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-uol_auto_vpn.driver">
 <span id="uol-auto-vpn-driver-module"></span><h2>uol_auto_vpn.driver module<a class="headerlink" href="#module-uol_auto_vpn.driver" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="uol_auto_vpn.driver.rmtree">
-<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.driver.</span></span><span class="sig-name descname"><span class="pre">rmtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.driver.rmtree" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="uol_auto_vpn.driver.remove_tree">
+<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.driver.</span></span><span class="sig-name descname"><span class="pre">remove_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.driver.remove_tree" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -124,13 +205,8 @@
 <section id="module-uol_auto_vpn.env">
 <span id="uol-auto-vpn-env-module"></span><h2>uol_auto_vpn.env module<a class="headerlink" href="#module-uol_auto_vpn.env" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="uol_auto_vpn.env.delete_env">
-<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.env.</span></span><span class="sig-name descname"><span class="pre">delete_env</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.env.delete_env" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="uol_auto_vpn.env.update_env">
-<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.env.</span></span><span class="sig-name descname"><span class="pre">update_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.env.update_env" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="uol_auto_vpn.env.reset_env">
+<span class="sig-prename descclassname"><span class="pre">uol_auto_vpn.env.</span></span><span class="sig-name descname"><span class="pre">reset_env</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uol_auto_vpn.env.reset_env" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">

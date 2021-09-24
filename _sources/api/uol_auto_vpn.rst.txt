@@ -4,6 +4,14 @@ uol\_auto\_vpn package
 Submodules
 ----------
 
+uol\_auto\_vpn.credentials module
+---------------------------------
+
+.. automodule:: uol_auto_vpn.credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 uol\_auto\_vpn.driver module
 ----------------------------
 
