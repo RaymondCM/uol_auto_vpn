@@ -13,7 +13,6 @@ if [[ -n ${1+x} ]]; then
   cd $HOME/projects/
   git clone ${dl_address} ${name}  --depth=1 || true
   cd "${name}"
-  trash .git || rm -rf .git || true
   echo -e "\nTo run in future please execute .$(realpath run.sh)"
 fi
 

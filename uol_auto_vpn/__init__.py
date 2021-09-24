@@ -1,4 +1,6 @@
 from pathlib import Path
 
-root = Path(__file__).parent
-version = "0.0.1"
+_root = Path(__file__).parent
+_config = _root / "options.json"
+_service_name = "uol_auto_vpn"
+

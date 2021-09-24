@@ -4,19 +4,19 @@ import os
 import time
 
 from uol_auto_vpn.driver import Browser, delete_driver
-from uol_auto_vpn.env import load_env, delete_env
+from uol_auto_vpn.env import load_env, reset_env
 
 
 def cli():
     import argparse
 
     parser = argparse.ArgumentParser(description='Auto connect to UoL VPN')
-    parser.add_argument('-r', '--reset', action='store_true',  default=False, help="Reset Keyring Data")
+    parser.add_argument('-r', '--reset', action='store_true',  default=False, help="Reset Application")
 
     args = parser.parse_args()
 
     if args.reset:
-        delete_env()
+        reset_env()
         delete_driver()
 
     run_browser()
@@ -55,4 +55,4 @@ def run_browser():
 
 
 if __name__ == '__main__':
-    run_browser()
+    cli()
