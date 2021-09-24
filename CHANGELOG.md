@@ -1,13 +1,18 @@
 # Changelog
 
-Generated on Thu 23 Sep 15:26:14 BST 2021.
+Generated on Fri 24 Sep 18:38:57 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
 
+## [1.0.1](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.1)
+
+- Version incremented '1.0.0' => '1.0.1' ([cb4db17](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/cb4db17f88724a15deba48a16b74a77b1f557240))
+- Implementation of Credentials manager ([326c775](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/326c775694ee240b43a8c14a5d74612b1c34b3bc))
+
 ## [1.0.0](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.0)
 
-- Version incremented '0.0.7' => '1.0.0' ([269c827](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/269c8277bf16157989c19e90baed769a06789f83))
+- Version incremented '0.0.7' => '1.0.0' ([aa96ce9](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/aa96ce96e7697a4828e29588e41601243f441d44))
 - Ensure drivers are reset ([6521eb3](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/6521eb3a0a0e4106785a9d66c94f2f164228fc0f))
 - Added delete driver functionality ([ac51c51](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/ac51c5130a525ad37dad3cfd61ed61b185a556b8))
 
