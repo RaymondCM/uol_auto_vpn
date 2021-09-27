@@ -1,13 +1,18 @@
 # Changelog
 
-Generated on Fri 24 Sep 18:38:57 BST 2021.
+Generated on Mon 27 Sep 13:49:16 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
 
+## [1.0.2](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.2)
+
+- Version incremented '1.0.1' => '1.0.2' ([8da4c7b](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/8da4c7ba57eb1e11151f42195b56ad98a8c997f3))
+- First working version with global install ([679bb20](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/679bb204837d4e99fe2c07e5dd924ccd7bf71a58))
+
 ## [1.0.1](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.1)
 
-- Version incremented '1.0.0' => '1.0.1' ([cb4db17](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/cb4db17f88724a15deba48a16b74a77b1f557240))
+- Version incremented '1.0.0' => '1.0.1' ([2f70dbb](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/2f70dbbf23deb1f7fe938e46f54b630687c44636))
 - Implementation of Credentials manager ([326c775](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/326c775694ee240b43a8c14a5d74612b1c34b3bc))
 
 ## [1.0.0](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.0)
