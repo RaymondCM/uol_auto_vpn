@@ -15,7 +15,9 @@ Please refer to the [documentation](https://raymondkirk.github.io/uol_auto_vpn/)
 One line installer. 
 
 ```bash 
-wget -qO - https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh | bash
+wget -qO install.sh https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh && ((sleep 2 && rm install.sh)&) && bash install.sh
+# or
+curl -s https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh --output install.sh && ((sleep 2 && rm install.sh)&) && bash install.sh
 ```
 
 Once installed run from any terminal window via the command ```uol_auto_vpn```.

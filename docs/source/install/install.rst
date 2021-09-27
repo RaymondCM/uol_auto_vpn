@@ -5,7 +5,7 @@ Recommended install
 
 .. parsed-literal::
 
-    wget -qO - https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh | bash
+    wget -qO install.sh https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh && ((sleep 2 && rm install.sh)&) && bash install.sh
 
 
 You can also install via `pip`
