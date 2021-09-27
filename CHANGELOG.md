@@ -1,13 +1,18 @@
 # Changelog
 
-Generated on Mon 27 Sep 13:49:16 BST 2021.
+Generated on Mon 27 Sep 14:09:20 BST 2021.
 
 ## [Unreleased](https://github.com/RaymondKirk/uol_auto_vpn.git)
 
 
+## [1.0.3](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.3)
+
+- Version incremented '1.0.2' => '1.0.3' ([3f69530](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/3f69530cceee12b16bff9392feac3e4c212b3760))
+- Fixed documentation ([ca88e15](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/ca88e150edc859167f103e8105749b969f35b637))
+
 ## [1.0.2](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.2)
 
-- Version incremented '1.0.1' => '1.0.2' ([8da4c7b](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/8da4c7ba57eb1e11151f42195b56ad98a8c997f3))
+- Version incremented '1.0.1' => '1.0.2' ([80455b3](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/80455b3de39c3e60d583ca2c537bc5fcccd38d9f))
 - First working version with global install ([679bb20](https://github.com/RaymondKirk/uol_auto_vpn.git/commit/679bb204837d4e99fe2c07e5dd924ccd7bf71a58))
 
 ## [1.0.1](https://github.com/RaymondKirk/uol_auto_vpn.git/releases/tag/1.0.1)
