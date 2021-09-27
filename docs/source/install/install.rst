@@ -1,13 +1,23 @@
 Installation Instructions
 =========================
 
-This package is installable via `pip`
+Recommended install
+
+.. parsed-literal::
+
+    wget -qO - https://raw.githubusercontent.com/RaymondKirk/uol_auto_vpn/main/install.sh | bash
+
+
+You can also install via `pip`
 
 .. parsed-literal::
 
     $ pip install uol_auto_vpn
     # OR
     $ pip install git+https://github.com/RaymondKirk/uol_auto_vpn.git@\ |release|\
+
+Once installed you can run with 'uol_auto_vpn'.
+
 
 
 Documentation

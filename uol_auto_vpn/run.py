@@ -47,7 +47,16 @@ def run_browser():
                 browser.driver.close()
                 command = f"sudo openconnect --cookie={vpn_cookie} {server}"
                 print(f"VNP cookie extracted running it with: \n\n{command}\n\nOpening Terminal\n")
-                os.system(f"gnome-terminal -e 'bash -c \"{command}; echo \"Closing Terminal\";sleep 10\"'")
+                command_wrap = f"echo Running {command}; " \
+                               f"echo ; " \
+                               f"{command}; " \
+                               f"echo Closing Terminal; " \
+                               f"sleep 5"
+                os.system(f"gnome-terminal -e 'bash -c \"{command_wrap}\"'")
+                # from subprocess import call
+                # command = ["sudo", "openconnnect", f"--cookie={vpn_cookie}", f"{server}"]
+                # print(f"VNP cookie extracted running it with: \n\n{' '.join(command)}\n\nOpening Terminal\n\n")
+                # call(command)
                 break
             time.sleep(0.5)
     finally:
