@@ -3,7 +3,7 @@ from __future__ import division, absolute_import, print_function
 import os
 import time
 
-from uol_auto_vpn.driver import Browser, delete_driver
+from uol_auto_vpn.driver import Browser
 from uol_auto_vpn.env import load_env, reset_env
 
 
@@ -17,7 +17,6 @@ def cli():
 
     if args.reset:
         reset_env()
-        delete_driver()
 
     run_browser()
 

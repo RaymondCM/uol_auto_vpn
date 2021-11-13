@@ -39,6 +39,7 @@ if __name__ == '__main__':
         install_requires=[
             'selenium==3.141.0',
             'keyring==23.2.1',
+            'webdriver-manager==3.5.2'
         ],
         entry_points={
             'console_scripts': [
