@@ -68,7 +68,7 @@ if ! [ -d venv ]; then
   elif command -v python3.7 > /dev/null; then
     _python=python3.7
   elif command -v python3.6 > /dev/null; then
-    _python=python3.7
+    _python=python3.6
   elif command -v python3 > /dev/null; then
     _python=python3
   else
